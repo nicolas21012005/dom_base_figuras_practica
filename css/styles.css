@@ -88,33 +88,6 @@ button:hover {
   margin-top: 20px;
 }
 
-/* figura circulo */
-.box.circle {
-  border-radius: 50%;
-  background: yellow;
-  transition: .5s;
-  transform: rotate(35deg);
-}
-
-/* figura estrella */
-.box.star {
-  width: 250px;
-  height: 250px;
-  background-color: goldenrod;
-  clip-path: polygon(50% 0%,
-      61% 38%,
-      98% 35%,
-      68% 57%,
-      79% 91%,
-      50% 70%,
-      21% 91%,
-      32% 57%,
-      2% 35%,
-      39% 35%);
-  transition: .5s;
-  transform: rotate(35deg);
-}
-
 hr {
   margin: 40px 0;
 }
@@ -126,4 +99,14 @@ img {
 #mainLink {
   margin-top: 20px;
   display: block;
+}
+
+@keyframes animation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
