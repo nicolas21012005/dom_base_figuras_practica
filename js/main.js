@@ -11,9 +11,8 @@ function resetearFigura() {
 const circleBtn = document.getElementById('btnCircle');
 function circle() {
     resetearFigura();
-    const element = document.getElementById('figure');
     element.style.borderRadius = '50%';
-    element.style.background = 'yellow';
+    element.style.background = '#b80000';
 }
 
 // funcion de la estrella
@@ -22,7 +21,7 @@ function star() {
     resetearFigura();
     element.style.clipPath = "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)";
     element.style.transition = '1s';
-    element.style.background = 'goldenrod';
+    element.style.background = 'yellow';
 }
 
 // funcion del GIF
@@ -37,7 +36,19 @@ const animationBtn = document.getElementById('btnAnim');
 function infite() {
     resetearFigura();
     element.style.animation = 'animation 2s linear infinite';
+    element.style.background = 'gray';
 }
+
+// funcion para mover arriba 
+
+const moveTop = document.getElementById('btnMoveUp');
+function up() {
+    resetearFigura();
+    element.style.transform = 'translateY(-60px)';
+    element.style.background = 'black';
+}
+
+//
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -45,4 +56,5 @@ document.addEventListener('DOMContentLoaded', function () {
     starBtn.addEventListener('click', star)
     gifBtn.addEventListener('click', gif)
     animationBtn.addEventListener('click', infite)
+    moveTop.addEventListener('click', up)
 })
