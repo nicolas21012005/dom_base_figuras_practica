@@ -87,6 +87,16 @@ function changeParagraphContent() {
     paragraph.textContent = prompt('Ingrese el nuevo contenido del parrafo')
 }
 
+// funcion para añadir un parrafo nuevo
+const createParagraph = document.getElementById('btnAddParagraph')
+function createNewParagraph() {
+    resetearFigura();
+    let divContainer = document.getElementById('extraParagraphs');
+    const newParagraph = document.createElement('p')
+    divContainer.appendChild(newParagraph)
+}
+
+// funci
 document.addEventListener('DOMContentLoaded', function () {
     circleBtn.addEventListener('click', circle)
     starBtn.addEventListener('click', star)
@@ -99,4 +109,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // botones de las funciones para cambiar los contenidos
     changeTitle.addEventListener('click', changeMainTitle)
     changeParagraph.addEventListener('click', changeParagraphContent)
+    createParagraph.addEventListener('click', createNewParagraph)
 })
