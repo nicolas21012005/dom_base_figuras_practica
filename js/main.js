@@ -96,7 +96,20 @@ function createNewParagraph() {
     divContainer.appendChild(newParagraph)
 }
 
-// funci
+// funcion para eliminar el ultimo parrafo dentro del div
+const deleteParagraphBtn = document.getElementById('btnRemoveParagraph')
+function deleteLastParagraph() {
+    resetearFigura();
+    let divContainer = document.getElementById('extraParagraphs');
+    const lastP = divContainer.querySelector('p:last-of-type');
+    if (lastP) {
+        lastP.remove();
+    } else {
+        alert('no hay parrafos para eliminar')
+    }
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
     circleBtn.addEventListener('click', circle)
     starBtn.addEventListener('click', star)
@@ -110,4 +123,5 @@ document.addEventListener('DOMContentLoaded', function () {
     changeTitle.addEventListener('click', changeMainTitle)
     changeParagraph.addEventListener('click', changeParagraphContent)
     createParagraph.addEventListener('click', createNewParagraph)
+    deleteParagraphBtn.addEventListener('click', deleteLastParagraph)
 })
