@@ -79,6 +79,14 @@ function changeMainTitle() {
     title.textContent = prompt('Ingrese el nuevo titulo')
 }
 
+// funcion para cambiar el contenido del parrafo
+const changeParagraph = document.getElementById('btnChangeParagraph')
+function changeParagraphContent() {
+    resetearFigura();
+    let paragraph = document.getElementById('mainParagraph');
+    paragraph.textContent = prompt('Ingrese el nuevo contenido del parrafo')
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     circleBtn.addEventListener('click', circle)
     starBtn.addEventListener('click', star)
@@ -90,5 +98,5 @@ document.addEventListener('DOMContentLoaded', function () {
     moveLeft.addEventListener('click', left)
     // botones de las funciones para cambiar los contenidos
     changeTitle.addEventListener('click', changeMainTitle)
-
+    changeParagraph.addEventListener('click', changeParagraphContent)
 })
