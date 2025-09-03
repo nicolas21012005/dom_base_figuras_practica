@@ -48,7 +48,14 @@ function up() {
     element.style.background = 'black';
 }
 
-//
+// funcion para mover abajo 
+
+const moveDown = document.getElementById('btnMoveDown');
+function down() {
+    resetearFigura();
+    element.style.transform = 'translateY(60px)';
+    element.style.background = 'orange';
+}
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -57,4 +64,5 @@ document.addEventListener('DOMContentLoaded', function () {
     gifBtn.addEventListener('click', gif)
     animationBtn.addEventListener('click', infite)
     moveTop.addEventListener('click', up)
+    moveDown.addEventListener('click', down)
 })
