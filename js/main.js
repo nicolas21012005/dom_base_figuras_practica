@@ -109,6 +109,17 @@ function deleteLastParagraph() {
     }
 }
 
+// funciones para cambiar atributos
+
+// funcion para que por prompt me deje insertar un color en Hexagesimal
+const colorHEX = document.getElementById('btnHexColor');
+function changeColorHEX() {
+    resetearFigura();
+    element.style.background = prompt('Ingrese un color en hexagesimal para su figura')
+}
+
+
+
 
 document.addEventListener('DOMContentLoaded', function () {
     circleBtn.addEventListener('click', circle)
@@ -124,4 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
     changeParagraph.addEventListener('click', changeParagraphContent)
     createParagraph.addEventListener('click', createNewParagraph)
     deleteParagraphBtn.addEventListener('click', deleteLastParagraph)
+    // botones de las funciones para cambiar los atrbutos
+    colorHEX.addEventListener('click', changeColorHEX)
+
 })
