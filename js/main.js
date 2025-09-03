@@ -138,6 +138,12 @@ function chooseFigure() {
     }
 }
 
+// funcion para pasar a la siguiente imagen
+const btnNextImage = document.getElementById('btnChangeImageNext')
+function nextimage() {
+    const img = document.getElementById('mainImage')
+    img.setAttribute('src', '../img/imagen2.jpg')
+}
 
 
 
@@ -158,5 +164,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // botones de las funciones para cambiar los atrbutos
     colorHEX.addEventListener('click', changeColorHEX)
     selectFigure.addEventListener('click', chooseFigure)
-
+    btnNextImage.addEventListener('click', nextimage)
 })
