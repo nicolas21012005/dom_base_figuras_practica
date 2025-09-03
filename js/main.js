@@ -118,6 +118,26 @@ function changeColorHEX() {
     element.style.background = prompt('Ingrese un color en hexagesimal para su figura')
 }
 
+// funcion para que por prompt me deje elegir la figura
+const selectFigure = document.getElementById('btnChooseFigure');
+function chooseFigure() {
+    resetearFigura();
+    let key = prompt('Ingrese la figura que desea (circulo, estrella, cuadrado)');
+    switch (key) {
+        case 'circulo':
+            circle();
+            break;
+        case 'estrella':
+            star();
+            break;
+        case 'cuadrado':
+            resetearFigura();
+            break;
+        default:
+            break;
+    }
+}
+
 
 
 
@@ -137,5 +157,6 @@ document.addEventListener('DOMContentLoaded', function () {
     deleteParagraphBtn.addEventListener('click', deleteLastParagraph)
     // botones de las funciones para cambiar los atrbutos
     colorHEX.addEventListener('click', changeColorHEX)
+    selectFigure.addEventListener('click', chooseFigure)
 
 })
