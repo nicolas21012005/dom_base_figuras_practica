@@ -57,6 +57,23 @@ function down() {
     element.style.background = 'orange';
 }
 
+// funcion para mover a la izquierda 
+
+const moveLeft = document.getElementById('btnMoveLeft');
+function left() {
+    resetearFigura();
+    element.style.transform = 'translateX(-60px)';
+    element.style.background = 'green';
+}
+
+// funcion para mover a la derecha 
+
+const moveRight = document.getElementById('btnMoveRight');
+function right() {
+    resetearFigura();
+    element.style.transform = 'translateX(60px)';
+    element.style.background = 'red';
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     circleBtn.addEventListener('click', circle)
@@ -65,4 +82,6 @@ document.addEventListener('DOMContentLoaded', function () {
     animationBtn.addEventListener('click', infite)
     moveTop.addEventListener('click', up)
     moveDown.addEventListener('click', down)
+    moveRight.addEventListener('click', right)
+    moveLeft.addEventListener('click', left)
 })
