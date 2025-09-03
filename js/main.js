@@ -40,7 +40,6 @@ function infite() {
 }
 
 // funcion para mover arriba 
-
 const moveTop = document.getElementById('btnMoveUp');
 function up() {
     resetearFigura();
@@ -49,7 +48,6 @@ function up() {
 }
 
 // funcion para mover abajo 
-
 const moveDown = document.getElementById('btnMoveDown');
 function down() {
     resetearFigura();
@@ -58,7 +56,6 @@ function down() {
 }
 
 // funcion para mover a la izquierda 
-
 const moveLeft = document.getElementById('btnMoveLeft');
 function left() {
     resetearFigura();
@@ -67,12 +64,19 @@ function left() {
 }
 
 // funcion para mover a la derecha 
-
 const moveRight = document.getElementById('btnMoveRight');
 function right() {
     resetearFigura();
     element.style.transform = 'translateX(60px)';
     element.style.background = 'red';
+}
+
+// funcion para cambiar el titulo
+const changeTitle = document.getElementById('btnChangeTitle')
+function changeMainTitle() {
+    resetearFigura();
+    let title = document.getElementById('mainTitle');
+    title.textContent = prompt('Ingrese el nuevo titulo')
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -84,4 +88,7 @@ document.addEventListener('DOMContentLoaded', function () {
     moveDown.addEventListener('click', down)
     moveRight.addEventListener('click', right)
     moveLeft.addEventListener('click', left)
+    // botones de las funciones para cambiar los contenidos
+    changeTitle.addEventListener('click', changeMainTitle)
+
 })
