@@ -212,7 +212,12 @@ function setTargetA() {
     siteTarget.setAttribute('target', '_blank')
 }
 
-
+// funcion para remover el atributo href de la etiqueta a
+const btnRemoveHref = document.getElementById('btnDisableLink')
+function disableLink() {
+    const tagA = document.getElementById('mainLink')
+    tagA.removeAttribute('href')
+}
 document.addEventListener('DOMContentLoaded', function () {
     circleBtn.addEventListener('click', circle)
     starBtn.addEventListener('click', star)
@@ -236,4 +241,5 @@ document.addEventListener('DOMContentLoaded', function () {
     btnAlt.addEventListener('click', altPrompt)
     changeUrl.addEventListener('click', changeLinkImg)
     setTarget.addEventListener('click', setTargetA)
+    btnRemoveHref.addEventListener('click', disableLink)
 })
