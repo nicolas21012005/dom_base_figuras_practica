@@ -142,9 +142,9 @@ function chooseFigure() {
 const btnNextImage = document.getElementById('btnChangeImageNext')
 function nextimage() {
     const imgs = [
-        "../img/imagen.jpg",
-        "../img/imagen2.jpg",
-        "../img/imagen3.jpg"
+        "img/imagen.jpg",
+        "img/imagen2.jpg",
+        "img/imagen3.jpg"
     ]
     const img = document.getElementById('mainImage');
     let currentImage = img.getAttribute('src')
@@ -160,6 +160,30 @@ function nextimage() {
     });
     img.setAttribute('src', siguiente)
 }
+
+// funcion para pasar a la imagen anterior
+const btnPrevImage = document.getElementById('btnChangeImagePrev')
+function prevImage() {
+    const imgs = [
+        "img/imagen.jpg",
+        "img/imagen2.jpg",
+        "img/imagen3.jpg"
+    ]
+    const img = document.getElementById('mainImage');
+    let currentImage = img.getAttribute('src')
+    let anterior = imgs[imgs.length - 1]
+    imgs.forEach((src, index) => {
+        if (currentImage === imgs[index]) {
+            if (index > 0) {
+                anterior = imgs[index - 1];
+            } else {
+                anterior = imgs[imgs.length - 1]
+            }
+        }
+    });
+    img.setAttribute('src', anterior)
+}
+
 
 
 
@@ -182,4 +206,5 @@ document.addEventListener('DOMContentLoaded', function () {
     colorHEX.addEventListener('click', changeColorHEX)
     selectFigure.addEventListener('click', chooseFigure)
     btnNextImage.addEventListener('click', nextimage)
+    btnPrevImage.addEventListener('click', prevImage)
 })
