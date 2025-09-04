@@ -204,6 +204,15 @@ function changeLinkImg() {
     const siteToVisit = document.getElementById('mainLink')
     siteToVisit.setAttribute('href', prompt('Ingrese una Url'))
 }
+
+// funcion para asignarle el atributo target a la etiqueta a
+const setTarget = document.getElementById('btnOpenLink')
+function setTargetA() {
+    const siteTarget = document.getElementById('mainLink')
+    siteTarget.setAttribute('target', '_blank')
+}
+
+
 document.addEventListener('DOMContentLoaded', function () {
     circleBtn.addEventListener('click', circle)
     starBtn.addEventListener('click', star)
@@ -226,4 +235,5 @@ document.addEventListener('DOMContentLoaded', function () {
     btnDisplayNone.addEventListener('click', changeDisplayImage)
     btnAlt.addEventListener('click', altPrompt)
     changeUrl.addEventListener('click', changeLinkImg)
+    setTarget.addEventListener('click', setTargetA)
 })
