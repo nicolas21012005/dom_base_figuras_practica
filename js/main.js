@@ -210,6 +210,7 @@ const setTarget = document.getElementById('btnOpenLink')
 function setTargetA() {
     const siteTarget = document.getElementById('mainLink')
     siteTarget.setAttribute('target', '_blank')
+    siteTarget.setAttribute('href', 'https://github.com/nicolas21012005')
 }
 
 // funcion para remover el atributo href de la etiqueta a
