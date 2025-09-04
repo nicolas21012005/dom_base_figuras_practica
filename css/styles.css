@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap');
+
 /* Reset sencillo */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
 }
 
 body {
-  background-color: #f4f4f4;
+  background-color: #191919;
   padding: 20px;
 }
 
@@ -21,7 +24,7 @@ body {
 /* Columna izquierda */
 .left {
   flex: 1;
-  background: #fff;
+  background: #141414;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -31,7 +34,7 @@ body {
 .left h2,
 .right h2 {
   padding: 20px;
-  color: #013889;
+  color: #ffffff;
   font-size: 30px;
 }
 
@@ -44,29 +47,26 @@ body {
 button {
   padding: 14px 20px;
   border: none;
-  background: #013889;
+  background: #b80000;
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
   min-width: 160px;
   margin: 16px;
-  border: 2px solid #013889;
-
 }
 
 button:hover {
-  background: #fff;
-  color: #013889;
-  border: 2px solid #013889;
-  border-radius: 0;
+  background: #ff0000;
+  color: #ffffff;
+  border-radius: 8px;
   transform: scale(1.1);
 }
 
 /* Columna derecha */
 .right {
   flex: 1;
-  background: #fff;
+  background: #141414;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -75,13 +75,14 @@ button:hover {
 
 .right h2 {
   margin-bottom: 20px;
+  color: #ffffff;
 }
 
 /* Figura base */
 .box {
   width: 200px;
   height: 200px;
-  background-color: #013889;
+  background-color: #ffcc00;
   margin: 0 auto;
   border-radius: 0;
   transition: all 0.5s ease;
@@ -114,4 +115,19 @@ img {
   to {
     transform: rotate(360deg);
   }
+}
+
+.texts {
+  color: #ffffff;
+}
+
+.footer {
+  padding: 30px;
+  color: #ffffff;
+  text-align: center;
+  justify-content: center;
+}
+
+.footer p {
+  margin-top: 10px;
 }
