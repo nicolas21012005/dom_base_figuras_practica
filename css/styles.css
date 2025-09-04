@@ -102,6 +102,10 @@ img {
 
 }
 
+#mainImage.display {
+  display: none;
+}
+
 @keyframes animation {
   from {
     transform: rotate(0deg);

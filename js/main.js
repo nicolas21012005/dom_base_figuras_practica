@@ -184,7 +184,12 @@ function prevImage() {
     img.setAttribute('src', anterior)
 }
 
-
+// funcion para ocultar imagen
+const btnDisplayNone = document.getElementById('btnToggleImage')
+function changeDisplayImage() {
+    const img = document.getElementById('mainImage');
+    img.classList.toggle('display')
+}
 
 
 
@@ -207,4 +212,5 @@ document.addEventListener('DOMContentLoaded', function () {
     selectFigure.addEventListener('click', chooseFigure)
     btnNextImage.addEventListener('click', nextimage)
     btnPrevImage.addEventListener('click', prevImage)
+    btnDisplayNone.addEventListener('click', changeDisplayImage)
 })
