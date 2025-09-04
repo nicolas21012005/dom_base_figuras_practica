@@ -28,6 +28,10 @@ function star() {
 const gifBtn = document.getElementById('btnGif');
 function gif() {
     resetearFigura();
+    element.style.backgroundRepeat = "no-repeat";
+    element.style.backgroundSize = "cover"; git
+    element.style.backgroundPosition = "center"
+
     element.style.backgroundImage = 'url("https://media1.tenor.com/m/T6P6HbRwvGgAAAAC/30-washington.gif")';
 }
 
