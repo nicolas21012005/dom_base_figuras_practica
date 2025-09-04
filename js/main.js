@@ -191,7 +191,12 @@ function changeDisplayImage() {
     img.classList.toggle('display')
 }
 
-
+// funcion para cambiar por prompt el atributo alt de la imagen
+const btnAlt = document.getElementById('btnChangeAlt');
+function altPrompt() {
+    const img = document.getElementById('mainImage')
+    img.setAttribute('alt', prompt('ingrese el alt que quiere que tenga la imagen'))
+}
 
 document.addEventListener('DOMContentLoaded', function () {
     circleBtn.addEventListener('click', circle)
@@ -213,4 +218,5 @@ document.addEventListener('DOMContentLoaded', function () {
     btnNextImage.addEventListener('click', nextimage)
     btnPrevImage.addEventListener('click', prevImage)
     btnDisplayNone.addEventListener('click', changeDisplayImage)
+    btnAlt.addEventListener('click', altPrompt)
 })
