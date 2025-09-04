@@ -141,9 +141,26 @@ function chooseFigure() {
 // funcion para pasar a la siguiente imagen
 const btnNextImage = document.getElementById('btnChangeImageNext')
 function nextimage() {
-    const img = document.getElementById('mainImage')
-    img.setAttribute('src', '../img/imagen2.jpg')
+    const imgs = [
+        "../img/imagen.jpg",
+        "../img/imagen2.jpg",
+        "../img/imagen3.jpg"
+    ]
+    const img = document.getElementById('mainImage');
+    let currentImage = img.getAttribute('src')
+    let siguiente = imgs[0]
+    imgs.forEach((src, index) => {
+        if (currentImage === imgs[index]) {
+            if (index < imgs.length - 1) {
+                siguiente = imgs[index + 1];
+            } else {
+                siguiente = imgs[0]
+            }
+        }
+    });
+    img.setAttribute('src', siguiente)
 }
+
 
 
 
