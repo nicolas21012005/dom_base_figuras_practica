@@ -198,6 +198,12 @@ function altPrompt() {
     img.setAttribute('alt', prompt('ingrese el alt que quiere que tenga la imagen'))
 }
 
+// funcion para cambiarle el atributo href de la img con prompt
+const changeUrl = document.getElementById('btnChangeLink')
+function changeLinkImg() {
+    const siteToVisit = document.getElementById('mainLink')
+    siteToVisit.setAttribute('href', prompt('Ingrese una Url'))
+}
 document.addEventListener('DOMContentLoaded', function () {
     circleBtn.addEventListener('click', circle)
     starBtn.addEventListener('click', star)
@@ -219,4 +225,5 @@ document.addEventListener('DOMContentLoaded', function () {
     btnPrevImage.addEventListener('click', prevImage)
     btnDisplayNone.addEventListener('click', changeDisplayImage)
     btnAlt.addEventListener('click', altPrompt)
+    changeUrl.addEventListener('click', changeLinkImg)
 })
